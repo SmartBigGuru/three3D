@@ -3,8 +3,11 @@ export interface Project {
   name: string;
   description: string;
   createdAt: Date;
-  status: 'draft' | 'processing' | 'completed';
+  status: Number;
+  avatar?: string;
+  file?: File;
   thumbnailUrl?: string;
+  state: Number;
 }
 
 export interface User {
@@ -44,3 +47,4 @@ export interface ModelGeneration {
   images: string[];
   modelUrl?: string;
   createdAt: Date;
+}
